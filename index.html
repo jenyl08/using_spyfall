@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-7994875041910921",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <title>테스트</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        body {
+            color: #ffffff;
+            background-color: #000000;
+            font-size: 20px;
+            height: 100%;
+        }
+        
+        html {
+            overflow: -moz-scrollbars-none;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 0px;
+            /* remove scrollbar space */
+            background: transparent;
+            /* optional: just make scrollbar invisible */
+        }
+        /* optional: show position indicator in red */
+        
+        table {
+            -ms-user-select: none;
+            -moz-user-select: -moz-none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        
+        .asd {
+            font-size: 14px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%)
+        }
+        
+        .squad {
+            display: inline;
+            position: absolute;
+            left: 50%;
+            top: 6%;
+            text-align: center;
+            font-size: 16px;
+            transform: translate(-50%, -50%)
+        }
+        
+        .species td {
+            width: 90px;
+            height: 90px;
+            padding: 0px;
+        }
+        
+        .class td {
+            width: 90px;
+            height: 90px;
+            padding: 0px;
+        }
+        
+        .pieces {
+            max-width: 100%;
+            height: auto;
+            padding: 3px;
+            position: relative;
+            border: 3px;
+        }
+        
+        .pieces img {
+            width: 100%;
+            opacity: 0.3;
+        }
+        
+        .name {
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+            text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+            position: absolute;
+            bottom: 12px;
+            left: 6px;
+        }
+        
+        .effect {
+            vertical-align: middle;
+            font-size: 14px;
+            padding: 0px;
+            display: none;
+        }
+        
+        .trait {
+            vertical-align: top;
+            text-align: center;
+            font-size: 12px;
+            padding: 0px;
+            display: none;
+        }
+        
+        .star {
+            color: yellow;
+        }
+        
+        .tier {
+            position: absolute;
+            top: 0px;
+            right: 2px;
+            opacity: 0.7;
+            display: none;
+            color: red;
+        }
+        
+        .tier_ss {
+            color: #ffbf7f;
+        }
+        
+        .tier_s {
+            color: #ffbf7f;
+        }
+        
+        .tier_aa {
+            color: #ffdf7f;
+        }
+        
+        .tier_a {
+            color: #7f7fff;
+        }
+        
+        .tier_b {
+            color: #7fbfff;
+        }
+        
+        .tier_c {
+            color: #ffffff;
+        }
+        
+        .tier_d {
+            color: #aaaaaa;
+        }
+        
+        .tier_f {
+            color: #888888;
+        }
+        
+        #demon {
+            width: 90px;
+            color: #2a6392;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 900;
+            text-shadow: none;
+        }
+        
+        #noble {
+            width: 90px;
+            color: #b8bcbd;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 900;
+            text-shadow: none;
+        }
+        
+        #glacial {
+            width: 90px;
+            color: #00be00;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 900;
+            text-shadow: none;
+        }
+        
+        #yordle {
+            width: 90px;
+            color: #801c1b;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 900;
+            text-shadow: none;
+        }
+        
+        #wild {
+            width: 90px;
+            color: #66178b;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 900;
+            text-shadow: none;
+        }
+        
+        #voids {
+            width: 90px;
+            color: #3c3f41;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 900;
+            text-shadow: none;
+        }
+        
+        #ninja {
+            width: 90px;
+            color: #c12629;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 900;
+            text-shadow: none;
+        }
+        
+        #imperial {
+            width: 90px;
+            color: #4346c1;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 900;
+            text-shadow: none;
+        }
+        
+        #elementals {
+            width: 90px;
+            color: #b7ba35;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 900;
+            text-shadow: none;
+        }
+        
+        #pirate {
+            width: 90px;
+            color: #8f8d64;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 900;
+            text-shadow: none;
+        }
+        
+        #dragon {
+            width: 90px;
+            color: #e70a0f;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 900;
+            text-shadow: none;
+        }
+        
+        #phantom {
+            width: 90px;
+            color: #ab6043;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 900;
+            text-shadow: none;
+        }
+        
+        #exile {
+            width: 90px;
+            color: #343181;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 900;
+            text-shadow: none;
+        }
+        
+        #robot {
+            width: 90px;
+            color: #357788;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 900;
+            text-shadow: none;
+        }
+        
+        #sorcerer {
+            width: 90px;
+            color: #f3e46e;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 900;
+            text-shadow: none;
+        }
+        
+        #assassin {
+            width: 90px;
+            color: #9d9283;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 900;
+            text-shadow: none;
+        }
+        
+        #blademaster {
+            width: 90px;
+            color: #6da6b4;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 900;
+            text-shadow: none;
+        }
+        
+        #knight {
+            width: 90px;
+            color: #797899;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 900;
+            text-shadow: none;
+        }
+        
+        #brawler {
+            width: 90px;
+            color: #71c891;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 900;
+            text-shadow: none;
+        }
+        
+        #gunslinger {
+            width: 90px;
+            color: #b98da1;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 900;
+            text-shadow: none;
+        }
+        
+        #shapeshifter {
+            width: 90px;
+            color: #816a2f;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 900;
+            text-shadow: none;
+        }
+        
+        #elementalist {
+            width: 90px;
+            color: #8e5428;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 900;
+            text-shadow: none;
+        }
+        
+        #ranger {
+            width: 90px;
+            color: #442a5c;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 900;
+            text-shadow: none;
+        }
+        
+        #guardian {
+            width: 90px;
+            color: #1b3fa6;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 900;
+            text-shadow: none;
+        }
+        
+        .cost_1 img {
+            border: 3px solid #ffffff;
+        }
+        
+        .cost_2 img {
+            border: 3px solid #888888;
+        }
+        
+        .cost_3 img {
+            border: 3px solid #463fe0;
+        }
+        
+        .cost_4 img {
+            border: 3px solid #ec10f0;
+        }
+        
+        .cost_5 img {
+            border: 3px solid #f38b19;
+        }
+        
+        .trait_tooltip {
+            color: white;
+            text-shadow: -1px 0 1px #B22222, 0 1px 1px #B22222, 1px 0 1px #B22222, 0 -1px 1px #B22222;
+        }
+        
+        .info_icon {
+            position: absolute;
+            width: 20px;
+            opacity: 0.5;
+            border-left: 7px solid rgba(0, 0, 0, 0);
+            border-top: 7px solid rgba(0, 0, 0, 0);
+            z-index: 10;
+        }
+        
+        .info {
+            background-color: #ffffff;
+            border-radius: 15px;
+            color: #000;
+            display: none;
+            min-width: 400px;
+            min-height: 180px;
+            width: 500px;
+        }
+        
+        .info_list {
+            list-style: none;
+            position: relative;
+            left: -15px;
+        }
+        
+        .b-close {
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            font-weight: 900;
+        }
+        
+        [data-tooltip-text]:hover {
+            position: relative;
+        }
+        
+        [data-tooltip-text]:after {
+            -webkit-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+            -moz-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+            transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+            -webkit-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+            -moz-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+            box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            font-weight: 900;
+            color: #fffff;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            position: absolute;
+            width: auto;
+            min-width: 300px;
+            max-width: 3000px;
+            word-wrap: break-word;
+            text-align: left;
+            z-index: 9999;
+            opacity: 0;
+            left: -9999px;
+            top: 90%;
+            content: attr(data-tooltip-text);
+        }
+        
+        [data-tooltip-text]:hover:after {
+            top: 130%;
+            left: 0;
+            opacity: 1;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+</head>
+<script>
+var generateRandom = function (min, max) {
+  var ranNum = Math.floor(Math.random()*(max-min+1)) + min;
+  return ranNum;
+}
+</script>
+
+
+<script type="text/javascript">
+var rand1 = generateRandom(0, 4);
+var rand2 = generateRandom(0, 100);
+<!--document.write(rand2);-->
+</script>
+
+<p>
+
+<script type="text/javascript">
+var bDisplay = true;
+function doDisplay0(){
+    var con = document.getElementById("myDIV0");
+    if(con.style.display=='block'){
+        con.style.display = 'block';
+    }else{
+        con.style.display = 'none';
+    }
+}
+var bDisplay = true;
+function doDisplay1(){
+    var con = document.getElementById("myDIV1");
+    if(con.style.display=='block'){
+        con.style.display = 'block';
+    }else{
+        con.style.display = 'none';
+    }
+}
+var bDisplay = true;
+function doDisplay2(){
+    var con = document.getElementById("myDIV2");
+    if(con.style.display=='block'){
+        con.style.display = 'block';
+    }else{
+        con.style.display = 'none';
+    }
+}
+var bDisplay = true;
+function doDisplay3(){
+    var con = document.getElementById("myDIV3");
+    if(con.style.display=='block'){
+        con.style.display = 'block';
+    }else{
+        con.style.display = 'none';
+    }
+}
+var bDisplay = true;
+function doDisplay4(){
+    var con = document.getElementById("myDIV4");
+    if(con.style.display=='block'){
+        con.style.display = 'block';
+    }else{
+        con.style.display = 'none';
+    }
+}
+</script>
+
+<script>
+	function show(input) {
+		document.getElementById(input).style.display = '';
+	}
+</script>
+
+
+<table border="1">
+<th><a href="javascript:doDisplay0();">>유저0 잠금</a></th>
+<th><a href="javascript:doDisplay1();">>유저1 잠금</a></th>
+<th><a href="javascript:doDisplay2();">>유저2 잠금</a></th>
+<th><a href="javascript:doDisplay3();">>유저3 잠금</a></th>
+<th><a href="javascript:doDisplay4();">>유저4 잠금</a></th>
+<tr>
+	<td><div id="myDIV0">
+	<a href="javascript:void(0);" onclick="show('user_0');">유저0 정체는</a>
+	<div id="user_0" style="display:none">
+		<span id="name0">유저0</span>
+		<script>
+			if (rand1 == 0){
+				document.getElementById('name0').innerHTML="스파이데스요"
+			} else {
+				document.getElementById('name0').innerHTML="위치" + rand2
+			}
+		</script>
+		</div>
+	</div>
+	</td>
+	<td><div id="myDIV1">
+	<a href="javascript:void(0);" onclick="show('user_1');">유저1 정체는</a>
+	<div id="user_1" style="display:none">
+		<span id="name1">유저1</span>
+		<script>
+			if (rand1 == 1){
+				document.getElementById('name1').innerHTML="스파이데스요"
+			} else {
+				document.getElementById('name1').innerHTML="위치" + rand2
+			}
+		</script>
+		</div>
+	</div>
+	</td>
+	<td><div id="myDIV2">
+	<a href="javascript:void(0);" onclick="show('user_2');">유저2 정체는</a>
+	<div id="user_2" style="display:none">
+		<span id="name2">유저2</span>
+		<script>
+			if (rand1 == 2){
+				document.getElementById('name2').innerHTML="스파이데스요"
+			} else {
+				document.getElementById('name2').innerHTML="위치" + rand2
+			}
+		</script>
+		</div>
+	</div>
+	</td>
+	<td><div id="myDIV3">
+	<a href="javascript:void(0);" onclick="show('user_3');">유저3 정체는</a>
+	<div id="user_3" style="display:none">
+		<span id="name3">유저3</span>
+		<script>
+			if (rand1 == 3){
+				document.getElementById('name3').innerHTML="스파이데스요"
+			} else {
+				document.getElementById('name3').innerHTML="위치" + rand2
+			}
+		</script>
+		</div>
+	</div>
+	</td>
+	<td><div id="myDIV4">
+	<a href="javascript:void(0);" onclick="show('user_4');">유저4 정체는</a>
+	<div id="user_4" style="display:none">
+		<span id="name4">유저4</span>
+		<script>
+			if (rand1 == 4){
+				document.getElementById('name4').innerHTML="스파이데스요"
+			} else {
+				document.getElementById('name4').innerHTML="위치" + rand2
+			}
+		</script>
+		</div>
+	</div>
+	</td></tr>
+</table>
+
+
+
+
+
+
+<body>
+    
+</body>
+
+</html>
