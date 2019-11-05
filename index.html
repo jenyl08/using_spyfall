@@ -475,7 +475,7 @@ var generateRandom = function (min, max) {
 
 <script type="text/javascript">
 var rand1 = generateRandom(0, 4);
-var rand2 = generateRandom(0, 100);
+var rand2 = generateRandom(1, 30);
 <!--document.write(rand2);-->
 </script>
 
@@ -535,6 +535,7 @@ function doDisplay4(){
 	}
 </script>
 
+<img src="place/all.png">
 
 <table border="1">
 <th><a href="javascript:doDisplay0();">>유저0 잠금</a></th>
@@ -549,9 +550,9 @@ function doDisplay4(){
 		<span id="name0">유저0</span>
 		<script>
 			if (rand1 == 0){
-				document.getElementById('name0').innerHTML="스파이데스요"
+				document.getElementById('name0').innerHTML="<img src=\"place/spy.png\">"
 			} else {
-				document.getElementById('name0').innerHTML="위치" + rand2
+				document.getElementById('name0').innerHTML="<img src=\"place/" + rand2 + ".png\">"
 			}
 		</script>
 		</div>
@@ -563,9 +564,9 @@ function doDisplay4(){
 		<span id="name1">유저1</span>
 		<script>
 			if (rand1 == 1){
-				document.getElementById('name1').innerHTML="스파이데스요"
+				document.getElementById('name1').innerHTML="<img src=\"place/spy.png\">"
 			} else {
-				document.getElementById('name1').innerHTML="위치" + rand2
+				document.getElementById('name1').innerHTML="<img src=\"place/" + rand2 + ".png\">"
 			}
 		</script>
 		</div>
@@ -577,9 +578,9 @@ function doDisplay4(){
 		<span id="name2">유저2</span>
 		<script>
 			if (rand1 == 2){
-				document.getElementById('name2').innerHTML="스파이데스요"
+				document.getElementById('name2').innerHTML="<img src=\"place/spy.png\">"
 			} else {
-				document.getElementById('name2').innerHTML="위치" + rand2
+				document.getElementById('name2').innerHTML="<img src=\"place/" + rand2 + ".png\">"
 			}
 		</script>
 		</div>
@@ -591,9 +592,9 @@ function doDisplay4(){
 		<span id="name3">유저3</span>
 		<script>
 			if (rand1 == 3){
-				document.getElementById('name3').innerHTML="스파이데스요"
+				document.getElementById('name3').innerHTML="<img src=\"place/spy.png\">"
 			} else {
-				document.getElementById('name3').innerHTML="위치" + rand2
+				document.getElementById('name3').innerHTML="<img src=\"place/" + rand2 + ".png\">"
 			}
 		</script>
 		</div>
@@ -605,9 +606,9 @@ function doDisplay4(){
 		<span id="name4">유저4</span>
 		<script>
 			if (rand1 == 4){
-				document.getElementById('name4').innerHTML="스파이데스요"
+				document.getElementById('name4').innerHTML="<img src=\"place/spy.png\">"
 			} else {
-				document.getElementById('name4').innerHTML="위치" + rand2
+				document.getElementById('name4').innerHTML="<img src=\"place/" + rand2 + ".png\">"
 			}
 		</script>
 		</div>
