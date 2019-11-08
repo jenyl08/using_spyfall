@@ -38,6 +38,15 @@ var generateRandom = function (min, max) {
 <script type="text/javascript">
 var rand1 = generateRandom(0, 4);
 var rand2 = generateRandom(1, 30);
+var row = parseInt(rand2 / 6) + 1;
+var col = rand2 % 6;
+if (col == 0){
+	row = row - 1
+	col = 6
+}
+<!--document.writeln(rand2);-->
+<!--document.writeln(row);-->
+<!--document.writeln(col);-->
 <!--document.write(rand2);-->
 </script>
 
@@ -107,13 +116,17 @@ function doDisplay5(){
 	}
 </script>
 
-<img src="place/all.png">
+<img src="place/all.png" width="70%" height="70%">
 
 <table border="1">
-<th><a href="javascript:doDisplay0();" style="color: red">김용재 확인</a></th>
+<th><a href="javascript:doDisplay0();" style="color: red">>김용재 확인</a></th>
+<th>　　　　</a></th>
 <th><a href="javascript:doDisplay1();" style="color: red">>김한영 확인</a></th>
+<th>　　　　</a></th>
 <th><a href="javascript:doDisplay2();" style="color: red">>유상원 확인</a></th>
+<th>　　　　</a></th>
 <th><a href="javascript:doDisplay3();" style="color: red">>전차웅 확인</a></th>
+<th>　　　　</a></th>
 <th><a href="javascript:doDisplay4();" style="color: red">>조경호 확인</a></th>
 <tr>
 	<td><div id="myDIV0">
@@ -122,65 +135,69 @@ function doDisplay5(){
 		<span id="name0">유저0</span>
 		<script>
 			if (rand1 == 0){
-				document.getElementById('name0').innerHTML="<img src=\"place/spy.png\" width=\"400px\" height=\"372px\">"
+				document.getElementById('name0').innerHTML="스파이! 확인하는 척 하자 <br> <img src=\"place/spy.png\" width=\"200px\" height=\"186px\">"
 			} else {
-				document.getElementById('name0').innerHTML="<img src=\"place/" + rand2 + ".png\">"
+				document.getElementById('name0').innerHTML=row + "행" + col + "열" + "<br> <img src=\"place/" + rand2 + ".png\">"
 			}
 		</script>
 		</div>
 	</div>
 	</td>
+	<td>　　　　</td>
 	<td><div id="myDIV1">
 	<a href="javascript:void(0);" onclick="show('user_1');" style="color: yellow">김한영 위치확인</a>
 	<div id="user_1" style="display:none">
 		<span id="name1">유저1</span>
 		<script>
 			if (rand1 == 1){
-				document.getElementById('name1').innerHTML="<img src=\"place/spy.png\" width=\"400px\" height=\"372px\">"
+				document.getElementById('name1').innerHTML="스파이! 확인하는 척 하자 <br> <img src=\"place/spy.png\" width=\"200px\" height=\"186px\">"
 			} else {
-				document.getElementById('name1').innerHTML="<img src=\"place/" + rand2 + ".png\">"
+				document.getElementById('name1').innerHTML=row + "행" + col + "열" + "<br><img src=\"place/" + rand2 + ".png\">"
 			}
 		</script>
 		</div>
 	</div>
 	</td>
+	<td>　　　　</td>
 	<td><div id="myDIV2">
 	<a href="javascript:void(0);" onclick="show('user_2');" style="color: yellow">유상원 위치확인</a>
 	<div id="user_2" style="display:none">
 		<span id="name2">유저2</span>
 		<script>
 			if (rand1 == 2){
-				document.getElementById('name2').innerHTML="<img src=\"place/spy.png\" width=\"400px\" height=\"372px\">"
+				document.getElementById('name2').innerHTML="스파이! 확인하는 척 하자 <br> <img src=\"place/spy.png\" width=\"200px\" height=\"186px\">"
 			} else {
-				document.getElementById('name2').innerHTML="<img src=\"place/" + rand2 + ".png\">"
+				document.getElementById('name2').innerHTML=row + "행" + col + "열" + "<br><img src=\"place/" + rand2 + ".png\">"
 			}
 		</script>
 		</div>
 	</div>
 	</td>
+	<td>　　　　</td>
 	<td><div id="myDIV3">
 	<a href="javascript:void(0);" onclick="show('user_3');" style="color: yellow">전차웅 위치확인</a>
 	<div id="user_3" style="display:none">
 		<span id="name3">유저3</span>
 		<script>
 			if (rand1 == 3){
-				document.getElementById('name3').innerHTML="<img src=\"place/spy.png\" width=\"400px\" height=\"372px\">"
+				document.getElementById('name3').innerHTML="스파이! 확인하는 척 하자 <br> <img src=\"place/spy.png\" width=\"200px\" height=\"186px\">"
 			} else {
-				document.getElementById('name3').innerHTML="<img src=\"place/" + rand2 + ".png\">"
+				document.getElementById('name3').innerHTML=row + "행" + col + "열" + "<br><img src=\"place/" + rand2 + ".png\">"
 			}
 		</script>
 		</div>
 	</div>
 	</td>
+	<td>　　　　</td>
 	<td><div id="myDIV4">
 	<a href="javascript:void(0);" onclick="show('user_4');" style="color: yellow">조경호 위치확인</a>
 	<div id="user_4" style="display:none">
 		<span id="name4">유저4</span>
 		<script>
 			if (rand1 == 4){
-				document.getElementById('name4').innerHTML="<img src=\"place/spy.png\" width=\"400px\" height=\"372px\">"
+				document.getElementById('name4').innerHTML="스파이! 확인하는 척 하자 <br> <img src=\"place/spy.png\" width=\"200px\" height=\"186px\">"
 			} else {
-				document.getElementById('name4').innerHTML="<img src=\"place/" + rand2 + ".png\">"
+				document.getElementById('name4').innerHTML=row + "행" + col + "열" + "<br><img src=\"place/" + rand2 + ".png\">"
 			}
 		</script>
 		</div>
