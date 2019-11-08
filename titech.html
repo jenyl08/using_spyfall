@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-7994875041910921",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <title>테스트</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        body {
+            color: #ffffff;
+            background-color: #000000;
+            font-size: 20px;
+            height: 100%;
+        }
+     
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+<script>
+var generateRandom = function (min, max) {
+  var ranNum = Math.floor(Math.random()*(max-min+1)) + min;
+  return ranNum;
+}
+</script>
+
+
+<script type="text/javascript">
+var rand1 = generateRandom(0, 4);
+var rand2 = generateRandom(1, 30);
+<!--document.write(rand2);-->
+</script>
+
+<p>
+
+<script type="text/javascript">
+var bDisplay = true;
+function doDisplay0(){
+    var con = document.getElementById("myDIV0");
+    if(con.style.display=='block'){
+        con.style.display = 'block';
+    }else{
+        con.style.display = 'none';
+    }
+}
+var bDisplay = true;
+function doDisplay1(){
+    var con = document.getElementById("myDIV1");
+    if(con.style.display=='block'){
+        con.style.display = 'block';
+    }else{
+        con.style.display = 'none';
+    }
+}
+var bDisplay = true;
+function doDisplay2(){
+    var con = document.getElementById("myDIV2");
+    if(con.style.display=='block'){
+        con.style.display = 'block';
+    }else{
+        con.style.display = 'none';
+    }
+}
+var bDisplay = true;
+function doDisplay3(){
+    var con = document.getElementById("myDIV3");
+    if(con.style.display=='block'){
+        con.style.display = 'block';
+    }else{
+        con.style.display = 'none';
+    }
+}
+var bDisplay = true;
+function doDisplay4(){
+    var con = document.getElementById("myDIV4");
+    if(con.style.display=='block'){
+        con.style.display = 'block';
+    }else{
+        con.style.display = 'none';
+    }
+}
+var bDisplay = true;
+function doDisplay5(){
+    var con = document.getElementById("myDIV5");
+    if(con.style.display=='block'){
+        con.style.display = 'block';
+    }else{
+        con.style.display = 'none';
+    }
+}
+
+</script>
+
+<script>
+	function show(input) {
+		document.getElementById(input).style.display = '';
+	}
+</script>
+
+<img src="place/all.png">
+
+<table border="1">
+<th><a href="javascript:doDisplay0();" style="color: red">김용재 확인</a></th>
+<th><a href="javascript:doDisplay1();" style="color: red">>김한영 확인</a></th>
+<th><a href="javascript:doDisplay2();" style="color: red">>유상원 확인</a></th>
+<th><a href="javascript:doDisplay3();" style="color: red">>전차웅 확인</a></th>
+<th><a href="javascript:doDisplay4();" style="color: red">>조경호 확인</a></th>
+<tr>
+	<td><div id="myDIV0">
+	<a href="javascript:void(0);" onclick="show('user_0');" style="color: yellow">김용재 위치확인</a>
+	<div id="user_0" style="display:none">
+		<span id="name0">유저0</span>
+		<script>
+			if (rand1 == 0){
+				document.getElementById('name0').innerHTML="<img src=\"place/spy.png\" width=\"400px\" height=\"372px\">"
+			} else {
+				document.getElementById('name0').innerHTML="<img src=\"place/" + rand2 + ".png\">"
+			}
+		</script>
+		</div>
+	</div>
+	</td>
+	<td><div id="myDIV1">
+	<a href="javascript:void(0);" onclick="show('user_1');" style="color: yellow">김한영 위치확인</a>
+	<div id="user_1" style="display:none">
+		<span id="name1">유저1</span>
+		<script>
+			if (rand1 == 1){
+				document.getElementById('name1').innerHTML="<img src=\"place/spy.png\" width=\"400px\" height=\"372px\">"
+			} else {
+				document.getElementById('name1').innerHTML="<img src=\"place/" + rand2 + ".png\">"
+			}
+		</script>
+		</div>
+	</div>
+	</td>
+	<td><div id="myDIV2">
+	<a href="javascript:void(0);" onclick="show('user_2');" style="color: yellow">유상원 위치확인</a>
+	<div id="user_2" style="display:none">
+		<span id="name2">유저2</span>
+		<script>
+			if (rand1 == 2){
+				document.getElementById('name2').innerHTML="<img src=\"place/spy.png\" width=\"400px\" height=\"372px\">"
+			} else {
+				document.getElementById('name2').innerHTML="<img src=\"place/" + rand2 + ".png\">"
+			}
+		</script>
+		</div>
+	</div>
+	</td>
+	<td><div id="myDIV3">
+	<a href="javascript:void(0);" onclick="show('user_3');" style="color: yellow">전차웅 위치확인</a>
+	<div id="user_3" style="display:none">
+		<span id="name3">유저3</span>
+		<script>
+			if (rand1 == 3){
+				document.getElementById('name3').innerHTML="<img src=\"place/spy.png\" width=\"400px\" height=\"372px\">"
+			} else {
+				document.getElementById('name3').innerHTML="<img src=\"place/" + rand2 + ".png\">"
+			}
+		</script>
+		</div>
+	</div>
+	</td>
+	<td><div id="myDIV4">
+	<a href="javascript:void(0);" onclick="show('user_4');" style="color: yellow">조경호 위치확인</a>
+	<div id="user_4" style="display:none">
+		<span id="name4">유저4</span>
+		<script>
+			if (rand1 == 4){
+				document.getElementById('name4').innerHTML="<img src=\"place/spy.png\" width=\"400px\" height=\"372px\">"
+			} else {
+				document.getElementById('name4').innerHTML="<img src=\"place/" + rand2 + ".png\">"
+			}
+		</script>
+		</div>
+	</div>
+	</td></tr>
+</table>
+
+
+
+
+
+
+    
+</body>
+
+</html>
