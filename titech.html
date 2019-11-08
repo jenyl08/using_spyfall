@@ -108,6 +108,17 @@ function doDisplay5(){
     }
 }
 
+var bDisplay = true;
+function doDisplayAnswer(){
+    var con = document.getElementById("answerDIV");
+    if(con.style.display=='none'){
+        con.style.display = 'none';
+    }else{
+        con.style.display = 'none';
+    }
+}
+
+
 </script>
 
 <script>
@@ -203,12 +214,21 @@ function doDisplay5(){
 		</script>
 		</div>
 	</div>
-	</td></tr>
+	</td>
+	<td>　　　　</td><td>　　　　</td>
+	<td>
+	<div id="answerDIV">
+		<a href="javascript:void(0);" onclick="show('answer');" style="color: yellow">정답 확인!</a>
+		<div id="answer" style="display:none">
+			<span id="answer">정답</span>
+			<script>
+				document.getElementById('answer').innerHTML=row + "행" + col + "열" + "<br><img src=\"place/" + rand2 + ".png\">"
+			</script>
+		</div>
+	</div>
+	</td>	
+	</tr>
 </table>
-
-
-
-
 
 
     
