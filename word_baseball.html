@@ -3368,6 +3368,8 @@ var cur_words = ""
   }
   </script>
   
+<div id="container">
+
 플레이 방법은 알아서...made by 한영 (2020/01/15)
 
 <p>  
@@ -3381,10 +3383,18 @@ var cur_words = ""
 <button onclick="numOCheck()">숫자만 출력</button>
 <p>
 <br><br>
-  한국어 명사 3266개 중 4가지 랜덤 출력<br>
-  <a href="https://www.korean.go.kr/front/etcData/etcDataView.do?mn_id=46&etc_seq=71">https://www.korean.go.kr/front/etcData/etcDataView.do?mn_id=46&etc_seq=71</a><br>
-  참조
-
+한국어 명사 3266개 중 4가지 랜덤 출력<br>
+<a href="https://www.korean.go.kr/front/etcData/etcDataView.do?mn_id=46&etc_seq=71">https://www.korean.go.kr/front/etcData/etcDataView.do?mn_id=46&etc_seq=71</a><br>
+참조
+<br><br><br>
+</div>
+<script>
+$('#container').on('scroll touchmove mousewheel', function(event) {
+event.preventDefault();
+event.stopPropagation();
+return false;
+});
+</script>
 
 
 </body>
